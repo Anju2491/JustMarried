@@ -1,0 +1,392 @@
+:root {
+  --noir: #000000;
+  --gris-fonce: #232323;
+  --rouge: #8c3f47;
+  --gris-pale: #e4dfdf;
+  --blanc: #ffffff;
+  
+  /* message staff */
+  --staff-fond-titre: var(--noir);
+  --staff-fond-contenu: var(--gris-fonce);
+  --staff-color-titre: var(--rouge);
+  --staff-color-texte: var(--gris-pale);
+  --staff-color-border: var(--rouge);
+  --staff-color-border-sous-titre: var(--rouge);
+  --staff-color-liens: var(--rouge);
+  --staff-color-sous-titre: var(--rouge);
+}
+
+/* ------------------------------------------- messages staff */
+
+#Manbloc * {
+  box-sizing: border-box;
+}
+#MANbloc {
+  margin: auto;
+  max-width: 100%;
+  background-size: 100% auto;
+  position: relative;
+  border: 1px solid transparent;
+}
+#MANbloc a,
+#PRbloc a {
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--staff-color-liens);
+  padding: 2px 4px;
+  letter-spacing: 1px;
+}
+#MANbloc a:hover,
+#PRbloc a:hover {
+  text-decoration: underline !important;
+}
+.MANtitre {
+  font: 40px/40px "Bebas neue", sans serif;
+  text-align: center;
+  letter-spacing: 2px;
+  padding: 30px;
+  background: var(--staff-fond-titre);
+  margin: 15px;
+  color: var(--staff-color-titre);
+  border-radius: 10px;
+}
+.MANssbloc {
+  width: 100%;
+  height: auto;
+}
+.MANssbloc .texte {
+  word-break: break-word;
+  margin: 0 15px;
+  padding: 25px 35px;
+  background-color: var(--staff-fond-contenu);
+  font: 18px arial;
+  color: var(--staff-color-texte);
+  text-align: justify;
+  border-bottom: 10px solid var(--staff-color-border);
+  position: relative;
+  border-radius: 10px;
+}
+.MANpetittitre {
+  width: 100%;
+  font-size: 25px;
+  height: 30px;
+  text-align: right;
+  position: relative;
+  z-index: 9;
+  color:var(--staff-color-sous-titre);
+}
+.MANpetittitre:after {
+  content: "";
+  position: absolute;
+  background: var(--staff-color-border-sous-titre);
+  bottom: -3px;
+  height: 8px;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+}
+
+
+/* ------------------------------------------------------------------------------ OLD FICHES ET RS */
+#FCH2prez,
+.fondfiche {
+  margin: auto;
+  max-width: 600px;
+  height: auto;
+  box-sizing: border-box;
+  font-family: abel !important;
+}
+#FCH2prez a,
+.fondfiche a {
+  text-decoration: underlined;
+  font-style: italic;
+  color: #8389af;
+}
+.FCH2titre,
+.fichetitre {
+  font-family: "Lequire";
+  text-align: right;
+  font-size: 35px;
+  letter-spacing: 3px;
+  line-height: 35px;
+  padding: 20px 30px 50px;
+  color: var(--orange-fiche);
+  background: var(--blue-fonce-fiche);
+  border-radius: 20px 20px 0px 0px;
+}
+.FCH2sstitre,
+.soustit {
+  position: absolute;
+  margin-top: -60px;
+  font-style: italic;
+  max-width: 400px;
+  height: 52px;
+  font-family: "pt sans narrow";
+  text-align: left;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  padding: 0 0 0 20px;
+  color: var(--orange-fiche);
+  box-sizing: border-box;
+  text-align: justify;
+  overflow: hidden;
+}
+.FCH2ssbloc {
+  width: 100%;
+  height: auto;
+  border-bottom: 50px solid var(--blue-fonce-fiche);
+  box-sizing: border-box;
+  border-radius: 0px 0px 20px 20px;
+}
+.fondfiche2 {
+  width: 100%;
+  background: #7b7dbd;
+  box-sizing: border-box;
+}
+.fondfiche2 table img {
+  max-width: 200px;
+}
+.fichetitre2 {
+  padding: 10px 0;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 46px;
+  margin-bottom: -6px;
+}
+.fichecadr,
+.fichecadr2 {
+  width: 296px;
+  position: relative;
+  height: 400px;
+  overflow: auto;
+  background-color: var(--blue-pale-fi);
+  box-sizing: border-box;
+  font-size: 15px;
+  text-align: justify;
+  border-radius: 10px 10px 10px 10px;
+}
+.fichecadr2 .cont2 {
+  padding: 10px;
+}
+.fondtit,
+.fondtit1,
+.fondtit12,
+.fondtit2,
+.fondtit22,
+.grandtitre {
+  text-align: center;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--orange-fiche);
+  letter-spacing: 2px;
+  background: var(--blue-fonce-fiche);
+  padding: 4px 0;
+  position: relative;
+  font-family: lequire;
+  text-transform: uppercase;
+  border-radius: 10px 10px 0px 0px;
+}
+.fichecadre,
+.fichecadre2 {
+  width: 500px;
+  padding-top: 10px;
+}
+.fichecadre .cont,
+.fichecadre2 .cont2 {
+  background-color: var(--blue-pale-fi);
+  text-align: justify;
+  padding: 15px 25px;
+  font-size: 15px;
+  border-radius: 0px 0px 10px 10px;
+}
+.grandtitre {
+  width: 600px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 23px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background-color: #2dbfda;
+  padding: 4px 0;
+  position: relative;
+  border-bottom: 5px solid #252b34;
+  font-family: abel;
+  box-sizing: border-box;
+}
+.blocformulairelien {
+  background-color: #fff;
+  width: 600px;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.bloclien {
+  background-color: #f8f9fe;
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 10px;
+  text-align: justify;
+  width: 435px;
+  box-sizing: border-box;
+}
+
+/* ------------------------------------------------------------------------------- NOUVELLE FICHE */
+#PRbloc {
+  width: auto;
+  box-sizing: border-box;
+  background-image: none !important;
+  padding: 10px 0;
+  max-width: 1000px;
+  position: relative;
+  z-index: 1;
+}
+.PR {
+  margin: 50px;
+  position: relative;
+  z-index: 4;
+  color: #d9d4f6;
+}
+.PRtitre {
+  font: 45px "lequire";
+  text-align: center;
+  padding: 30px;
+  color: var(--orange-fiche);
+  background: var(--blue-fonce-fiche);
+  letter-spacing: 0.5px;
+  border-radius: 25px;
+}
+.PRcit {
+  font: 17px "roboto";
+  text-shadow: none;
+  text-transform: lowercase;
+  font-style: italic;
+  width: auto;
+  margin: 15px 10px 0 10px;
+  margin-bottom: -25px;
+  box-sizing: border-box;
+  line-height: 20px;
+  color: var(--blue-pale-fi);
+}
+.PRinf,
+.PRdesc {
+  margin: 25px 0px;
+  background-color: #7b7dbd;
+  padding: 20px;
+  border-radius: 20px;
+}
+.PRtit {
+  text-align: center;
+  font: 20px "lequire";
+  line-height: 40px;
+  margin-bottom: 30px;
+  background: var(--blue-fonce-fiche);
+  color: var(--orange-fiche);
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+.inf {
+  border-left: 5px solid var(--blue-fonce-fiche);
+  padding: 5px 10px;
+  height: 240px;
+  overflow: auto;
+  font-size: 14px;
+  box-sizing: border-box;
+  scrollbar-color: var(--blue-fonce-fiche) var(--blue-pale-fi);
+  scrollbar-width: thin;
+}
+.inf span {
+  border-bottom: 2px solid var(--blue-fonce-fiche);
+  padding: 2px 0px;
+  margin-right: 5px;
+  font-family: "lequire";
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #ffb28f;
+}
+.inf br {
+  margin-top: 2px;
+}
+.infimg {
+  float: right;
+  overflow: hidden;
+  width: 240px;
+  height: 240px;
+  box-sizing: border-box;
+  border: 10px solid var(--blue-fonce-fiche);
+  border-radius: 20px;
+}
+.infimg img {
+  width: 220px;
+}
+.PRtith {
+  background-color: var(--blue-fonce-fiche);
+  color: var(--orange-fiche);
+  font: 20px "lequire";
+  text-transform: uppercase;
+  margin-bottom: 0;
+  padding: 10px 0;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.hist {
+  background: #7b7dbd;
+  padding: 30px;
+  border-top: none;
+  font-size: 16.5px;
+  border-radius: 0px 0px 20px 20px;
+}
+.PRdesc {
+  box-sizing: border-box;
+}
+.PRphy,
+.PRcar {
+  display: flex;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+.PRphyimg {
+  min-width: 170px;
+  height: 330px;
+  overflow: hidden;
+  border: 10px solid var(--blue-fonce-fiche);
+  margin-right: 10px;
+  box-sizing: border-box;
+  filter: grayscale(1);
+}
+.PRphyimg img {
+  width: 160px;
+  height: 320px;
+}
+
+.phy,
+.car {
+  background-color: var(--blue-pale-fi);
+  padding: 10px;
+  height: 325px;
+  box-sizing: border-box;
+  overflow: auto;
+  overflow-y: scroll;
+  scrollbar-color: var(--blue-fonce-fiche) var(--blue-pale-fi);
+  scrollbar-width: thin;
+  flex-grow: 2;
+  color: var(--blue-fonce-fiche);
+}
+
+.PRcar {
+  margin-top: 70px;
+  padding-top: 25px;
+  position: relative;
+  display: block;
+}
+.PRcar .PRtit {
+  width: 100%;
+  position: absolute;
+  left: -5px;
+  top: -45px;
+}
+
