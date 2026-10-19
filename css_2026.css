@@ -390,3 +390,464 @@
   top: -45px;
 }
 
+
+/* ACCES RAPIDE */ 
+
+:root {
+  --qa-fond: var(--noir);
+  --qa-bordure: var(--rouge);
+  --qa-bouton: var(--rouge);
+  --qa-bouton-symbole: var(--gris-pale);
+  --qa-titre-couleur: var(--rouge);
+  --qa-fond-sstitre: var(--rouge);
+  --qa-couleur-sstitre: var(--blanc);
+  --qa-links-couleur: var(--rouge);
+  --qa-links-fond: var(--gris-fonce);
+  --qa-links-fond-hover: var(--rouge);
+  --qa-links-couleur-hover: var(--noir);
+}
+
+.quick-access {
+    position: fixed;
+    top: 50px;
+    left: -300px; /* caché */
+    width: 300px;
+    min-height: 500px;
+    padding: 20px 10px 20px 20px;
+    box-sizing: border-box;
+    background: var(--qa-fond);
+    border: 8px solid var(--qa-bordure);
+    transition: left 0.35s ease;
+    z-index: 999;
+}
+
+/* état ouvert */
+.quick-access.open {
+    left: 0;
+}
+
+.quick-access-content {
+    overflow-y: auto;
+    overflow-x: visible;
+    max-height: calc(100vh - 100px);
+    margin-left: -25px;
+    padding-left: 25px;
+  padding-right: 10px;
+}
+
+.toggle-btn {
+    position: absolute;
+    right: -60px;
+    top: 40px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+    background: var(--qa-bouton);
+    border-radius:15px;
+    font-size: 22px;
+    color: var(--qa-bouton-symbole);
+    box-shadow: 4px 4px 8px rgba(0,0,0,.15);
+}
+
+.quick-access h3 {
+    margin: 0px 0 10px;
+    text-align: center;
+    color: var(--qa-titre-couleur);
+    font-size: 30px;
+    font-family: "Bebas Neue", sans-serif;
+    border: none;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.section-title {
+  background: var(--qa-fond-sstitre); 
+  color: var(--qa-couleur-sstitre); 
+  text-align: center; 
+  padding: 8px; 
+  margin-bottom: 10px; 
+  font-weight: bold; 
+  position: relative; 
+  left:-25px; 
+  width: calc(100% + 25px); 
+  text-align:right;
+    box-sizing: border-box;
+  font-size: 15px;
+}
+
+
+.section-content {
+      display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 8px;
+}
+
+.section a {
+    /*display: block;*/
+    margin-bottom: 6px;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: var(--qa-links-couleur);
+  background-color: var(--qa-links-fond);
+    font-size: 12px;
+  text-align:center;
+  flex: 1 1 0;
+}
+
+.section a.linkfull {
+  flex: 0 0 100%;
+}
+
+.section a.linkdemi {
+  flex: 1.5;
+}
+
+.section a:hover {
+  background:var(--qa-links-fond-hover);
+  color:var(--qa-links-couleur-hover);
+  font-weight:bold;
+}
+
+/* FIN ACCES RAPIDE */ 
+
+/* NOTIFICATIONS */ 
+:root {
+  --notifi-fond: var(--noir);
+  --notifi-bordure: var(--rouge);
+  --notifi-fond-bouton: var(--rouge);
+  --notifi-color-bouton: var(--gris-pale);
+--notifi-fond-bouton-hover: var(--gris-fonce);
+  --notifi-color-bouton-hover: var(--rouge);
+  --notifi-border-unread: var(--rouge);
+  --notifi-border-read: var(--gris-pale);
+  --mentiontag: var(--rouge);
+  --mentiontag-hover: var(--gris-fonce);
+}
+
+.mentiontag {
+  background-color: var(--mentiontag);
+}
+
+.mentiontag:hover {
+  background-color: var(--mentiontag-hover);
+}
+
+/* Cache la toolbar défaut */
+#fa_toolbar {display: none}
+
+/* Bouton de notification */
+#notiffi_button {
+ cursor: pointer;
+    border-radius: 5px;
+ /*display: flex;*/
+ align-items: center;
+ gap: 10px;
+ padding: 5px 10px;
+ /*position: fixed;*/
+ z-index: 99;
+ top: 60px;
+    right: 25px;
+    height: 40px;
+    font-size: 30px;
+    background-color: var(--navbar-fond-icone);
+  font-size: 30px;
+  transition: all ease .7s;
+}
+
+div#notiffi_button.active {
+    right: 325px;
+    transition: all ease .7s;
+}
+
+.bell:hover {
+  animation: ring 0.6s ease-in-out;
+}
+
+@keyframes ring {
+  0%   { transform: rotate(0deg); }
+  15%  { transform: rotate(20deg); }
+  30%  { transform: rotate(-18deg); }
+  45%  { transform: rotate(14deg); }
+  60%  { transform: rotate(-10deg); }
+  75%  { transform: rotate(6deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Conteneur du nombre de notification non lues REMPLI */
+.unread_count {
+ position: absolute;
+ background: var(--neutralDarker);
+ border-radius: 5px;
+ width: 25px;
+ display: grid;
+ place-items: center;
+ font-weight: 600;
+ font-size: 12px;
+ scale: 1;
+ opacity: 1;
+ aspect-ratio: 1;
+ transition: scale ease-out .2s;
+  top: 28px;
+    left: 25px;
+}
+
+/* Conteneur du nombre de notification non lues VIDE */
+.unread_count:empty {
+ position: absolute;
+ scale: 0;
+ opacity: 0;
+ transition: all ease-out .2s;
+}
+
+/* Menu des notifications FERMÉ */
+#notiffi_panel {
+ --menuSize: 300px;
+ /* taille du Menu */
+ width: var(--menuSize);
+ position: fixed;
+ z-index: 98;
+ top: 50px;
+ height: 100%;
+ right: calc(var(--menuSize) * -1);
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ align-items: start;
+    background-color: var(--notifi-fond);
+    border: 8px solid var(--notifi-bordure);
+ padding: 15px;
+ padding-top: 50px;
+ opacity: 0;
+ visibility: hidden;
+ transition: all ease .7s;
+  max-height: 750px;
+}
+
+/* Menu des notifications OUVERT */
+#notiffi_panel.open {
+ right: 0;
+ visibility: visible;
+ opacity: 1;
+}
+
+/* Conteneur des notifications */
+.all_notifications {
+ width: 100%;
+ overflow: auto;
+ max-height: 100%;
+ background: var(--neutralDark);
+ padding: 10px;
+ border-radius: 10px;
+ -ms-overflow-style: none;
+ scrollbar-width: none;
+
+ /* Désactive la barre de défilement dans le contenenur */
+ &::-webkit-scrollbar {
+   display: none;
+ }
+}
+
+/* Conteneur des notifications VIDE */
+.no_notification {
+ text-align: center;
+ font-style: italic;
+}
+
+/* Conteneur du footer du menu 
+  (voir toutes les notifications, marquer comme lu, tout supprimer) */
+.notiffi_manage {
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ gap: 5px;  
+    flex-direction: column;
+}
+
+.notiffi_manage div, .notiffi_manage button {
+    background-color: var(--notifi-fond-bouton);
+    color: var(--notifi-color-bouton);
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+  border-radius:5px;
+}
+
+.notiffi_manage div:hover, .notiffi_manage button:hover {
+    background-color: var(--notifi-fond-bouton-hover);
+    color: var(--notifi-color-bouton-hover);  
+}
+
+.notiffi_manage a {
+color: var(--notifi-color-bouton);
+}
+
+.notiffi_manage a:hover, .notiffi_manage button:hover {
+    color: var(--notifi-color-bouton-hover);  
+}
+
+/* Conteneur des bouton d'action des notifications */
+.notiffi_actions {
+ display: grid;
+ justify-items: end;
+ gap: 5px;
+
+ /* Bouton d'action */
+ button {
+   padding: 2px 10px;
+   background: var(--neutralDark);
+   border-radius: 5px;
+
+   &:hover {
+     color: var(--accentClr)
+   }
+ }
+}
+
+/* Apparence d'une notification */
+.notification {
+ display: flex;
+ gap: 15px;
+ margin-bottom: 5px;
+ padding: 10px 5px;
+ border-radius: 5px;
+ border: 1px solid transparent;
+ transition: border .2s;
+ animation: notiffiFadeIn 0.3s ease-in-out;
+
+ /* Notification au survol */
+ &:hover {
+   border-color: var(----notifi-border-read);
+ }
+}
+
+/* Animation d'apparition des notifications */
+@keyframes notiffiFadeIn {
+ from {
+   opacity: 0;
+ }
+
+ to {
+   opacity: 1;
+ }
+}
+
+/* Apparence d'une notification NON LUE */
+.notification.unread {
+ border-color: var(--notifi-border-unread);
+}
+
+/* Conteneur des détails de la notification (avatar, icone) */
+.notif_details {
+ position: relative;
+ align-self: start;
+}
+
+/* Conteneur de l'avatar */
+.notif_avatar {
+ background: var(--neutral);
+ height: 35px;
+ border-radius: 5px;
+ aspect-ratio: 1;
+
+ /* Image de l'avatar */
+ & img {
+   width: 100%;
+   aspect-ratio: 1;
+   object-fit: cover;
+   object-position: center;
+   border-radius: 5px;
+ }
+}
+
+/* Icone du type de la notification */
+.notif_icon {
+ position: absolute;
+ bottom: -5px;
+ right: -5px;
+ background: var(--neutral);
+ width: 18px;
+ aspect-ratio: 1;
+ display: grid;
+ place-items: center;
+ border-radius: 20px;
+ font-size: 10px;
+}
+
+/* Icone lorsque la notification est non lue */
+.notification.unread .notif_icon {
+ color: var(--neutral);
+ background: var(--accentClr);
+}
+
+/* Conteneur du texte et la date de la notification */
+.notif_content {
+ width: 100%;
+}
+
+.notif_text a:last-child {
+  font-weight:bold;
+}
+
+/* Date de la notification */
+.notif_time {
+ font-size: var(--little-size);
+ opacity: .8;
+ margin-top: 5px;
+}
+
+/* Bouton de suppression de la notification */
+.notif_close {
+ background: transparent;
+ align-self: start;
+ font-size: 18px;
+ line-height: 0;
+ opacity: 0;
+ border-radius: 100px;
+ aspect-ratio: 1;
+ padding: 2px;
+ transition: all .3s;
+}
+
+/* Affiche le bouton de suppression au survol de la notification */
+.notification:hover .notif_close {
+ opacity: 1
+}
+
+/* Alerte d'une notification */
+.notification.alert {
+ position: fixed;
+ width: 400px;
+ align-items: center;
+ z-index: 99;
+ bottom: 10px;
+ right: 10px;
+ transform: translateY(100%);
+ opacity: 0;
+ filter: blur(5px);
+ transition: all .5s ease-in-out;
+ background-color: #bdbce4;
+ border: 5px solid #9f9ed6;
+padding: 10px;
+}
+
+.notification.alert.up {
+ transform: translateY(0%);
+ opacity: 1;
+ filter: blur(0);
+ transition: all .5s ease-in-out;
+}
+
+.alert_close {
+ background: var(--neutral);
+ font-size: 18px;
+ line-height: 0;
+ border-radius: 100px;
+ aspect-ratio: 1;
+ padding: 2px;
+}
+/* FIN NOTIFICATIONS */ 
+
