@@ -401,10 +401,10 @@
   --qa-titre-couleur: var(--rouge);
   --qa-fond-sstitre: var(--rouge);
   --qa-couleur-sstitre: var(--blanc);
-  --qa-links-couleur: var(--rouge);
+  --qa-links-couleur: var(--gris-pale);
   --qa-links-fond: var(--gris-fonce);
   --qa-links-fond-hover: var(--rouge);
-  --qa-links-couleur-hover: var(--noir);
+  --qa-links-couleur-hover: var(--gris-pale);
 }
 
 .quick-access {
