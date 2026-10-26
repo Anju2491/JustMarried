@@ -911,8 +911,8 @@ padding: 10px;
   display: flex;
   margin: 0;
   list-style: none;
-  padding: var(--switcheroo-gap-size);
-  gap: var(--switcheroo-gap-size);
+  /*padding: var(--switcheroo-gap-size);
+  gap: var(--switcheroo-gap-size);*/
 }
 .switcheroo[direction="horizontal"] .switcheroo__squircles {
   flex-direction: row;
@@ -924,8 +924,8 @@ padding: 10px;
 /* BARRE --- */
 .switcheroo {
   color: var(--color-text);
-  background-color: var(--switcheroo-light);
-  border: var(--switcheroo-border);
+  /*background-color: var(--switcheroo-light);
+  border: var(--switcheroo-border);*/
   font-size: 16px;
 }
 
@@ -937,9 +937,12 @@ padding: 10px;
   position: relative;
   display: grid;
   place-items: center;
-  background-color: var(--switcheroo-grey);
-  width: var(--switcheroo-img-width);
-  height: var(--switcheroo-img-height);
+  /*background-color: var(--switcheroo-grey);*/
+  background-color: var(--noir);
+  /*width: var(--switcheroo-img-width);
+  height: var(--switcheroo-img-height);*/
+  width:20px;
+  height;20px;
   border-radius: 50%;
   cursor: pointer;
   transition: border-radius 128ms var(--switcheroo-ease);
