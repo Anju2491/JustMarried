@@ -88,64 +88,64 @@
 
 
 /* ------------------------------------------------------------------------------ OLD FICHES ET RS */
-#FCH2prez,
-.fondfiche {
-  margin: auto;
-  max-width: 600px;
-  height: auto;
-  box-sizing: border-box;
-  font-family: abel !important;
+#FCH2prez, .fondfiche {
+    margin: auto;
+    max-width: 600px;
+    height: auto;
+    box-sizing: border-box;
 }
+
 #FCH2prez a,
 .fondfiche a {
   text-decoration: underlined;
   font-style: italic;
-  color: #8389af;
+  color: var(--fiche1-liens-color);
 }
-.FCH2titre,
-.fichetitre {
-  font-family: "Lequire";
-  text-align: right;
-  font-size: 35px;
-  letter-spacing: 3px;
-  line-height: 35px;
-  padding: 20px 30px 50px;
-  color: var(--orange-fiche);
-  background: var(--blue-fonce-fiche);
-  border-radius: 20px 20px 0px 0px;
+
+.FCH2titre, .fichetitre {
+    font-family: 'Bebas Neue', sans serif;
+    text-align: right;
+    font-size: 35px;
+    letter-spacing: 3px;
+    line-height: 35px;
+    padding: 20px 30px 50px;
+    color: var(--fiche1-titre-color);
+    background: var(--fiche1-titre-fond);
 }
-.FCH2sstitre,
-.soustit {
-  position: absolute;
-  margin-top: -60px;
-  font-style: italic;
-  max-width: 400px;
-  height: 52px;
-  font-family: "pt sans narrow";
-  text-align: left;
-  font-size: 15px;
-  letter-spacing: 0.5px;
-  padding: 0 0 0 20px;
-  color: var(--orange-fiche);
-  box-sizing: border-box;
-  text-align: justify;
-  overflow: hidden;
+
+.FCH2sstitre, .soustit {
+    position: absolute;
+    margin-top: -60px;
+    font-style: italic;
+    max-width: 400px;
+    height: 52px;
+    text-align: left;
+    font-size: 15px;
+    letter-spacing: .5px;
+    padding: 0 0 0 20px;
+    color: var(--fiche1-titre-citation-color);
+    box-sizing: border-box;
+    text-align: justify;
+    overflow: hidden;
 }
+
 .FCH2ssbloc {
-  width: 100%;
-  height: auto;
-  border-bottom: 50px solid var(--blue-fonce-fiche);
-  box-sizing: border-box;
-  border-radius: 0px 0px 20px 20px;
+    width: 100%;
+    height: auto;
+    border-bottom: 50px solid var(--fiche1-border-bottom);
+    box-sizing: border-box;
 }
+
 .fondfiche2 {
-  width: 100%;
-  background: #7b7dbd;
-  box-sizing: border-box;
+    width: 100%;
+    background: var(--fiche1-fond);
+    box-sizing: border-box;
 }
+
 .fondfiche2 table img {
   max-width: 200px;
 }
+
 .fichetitre2 {
   padding: 10px 0;
   color: #000;
@@ -153,52 +153,59 @@
   font-size: 46px;
   margin-bottom: -6px;
 }
-.fichecadr,
-.fichecadr2 {
-  width: 296px;
-  position: relative;
-  height: 400px;
-  overflow: auto;
-  background-color: var(--blue-pale-fi);
-  box-sizing: border-box;
-  font-size: 15px;
-  text-align: justify;
-  border-radius: 10px 10px 10px 10px;
+
+.fichecadr, .fichecadr2 {
+    width: 296px;
+    position: relative;
+    height: 400px;
+    overflow: auto;
+    background-color: var(--fiche1-fond-bloc);
+    box-sizing: border-box;
+    font-size: 15px;
+    text-align: justify;
 }
+
 .fichecadr2 .cont2 {
   padding: 10px;
 }
-.fondtit,
-.fondtit1,
-.fondtit12,
-.fondtit2,
-.fondtit22,
-.grandtitre {
-  text-align: center;
-  font-size: 18px;
-  line-height: 23px;
-  color: var(--orange-fiche);
-  letter-spacing: 2px;
-  background: var(--blue-fonce-fiche);
-  padding: 4px 0;
-  position: relative;
-  font-family: lequire;
-  text-transform: uppercase;
-  border-radius: 10px 10px 0px 0px;
+
+.fondtit, .fondtit1, .fondtit12, .fondtit2, .fondtit22, .grandtitre {
+    text-align: center;
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--fiche1-sous-titre-color);
+    letter-spacing: 2px;
+    background: var(--fiche1-sous-titre-fond);
+    padding: 4px 0;
+    position: relative;
+    font-family: "Bebas Neue", sans serif;
+    text-transform: uppercase;
 }
+
 .fichecadre,
 .fichecadre2 {
   width: 500px;
   padding-top: 10px;
 }
-.fichecadre .cont,
-.fichecadre2 .cont2 {
-  background-color: var(--blue-pale-fi);
-  text-align: justify;
-  padding: 15px 25px;
-  font-size: 15px;
-  border-radius: 0px 0px 10px 10px;
+
+.fichecadr, .fichecadr2 {
+    width: 296px;
+    position: relative;
+    height: 400px;
+    overflow: auto;
+    background-color: var(--fiche1-fond-bloc);
+    box-sizing: border-box;
+    font-size: 15px;
+    text-align: justify;
 }
+
+.fichecadre .cont, .fichecadre2 .cont2 {
+    background-color: var(--fiche1-fond-bloc);
+    text-align: justify;
+    padding: 15px 25px;
+    font-size: 15px;
+}
+
 .grandtitre {
   width: 600px;
   text-align: center;
@@ -215,12 +222,14 @@
   font-family: abel;
   box-sizing: border-box;
 }
+
 .blocformulairelien {
   background-color: #fff;
   width: 600px;
   box-sizing: border-box;
   padding: 15px;
 }
+
 .bloclien {
   background-color: #f8f9fe;
   height: 100px;
