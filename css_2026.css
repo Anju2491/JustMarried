@@ -14,6 +14,31 @@
   --staff-color-border-sous-titre: var(--rouge);
   --staff-color-liens: var(--rouge);
   --staff-color-sous-titre: var(--rouge);
+
+  --fiche1-titre-fond: var(--noir);
+  --fiche1-titre-color: var(--rouge);
+  --fiche1-titre-citation-color: var(--rouge);
+  --fiche1-border-bottom: var(--noir);
+  --fiche1-fond: var(--gris-fonce);
+  --fiche1-sous-titre-fond: var(--rouge);
+  --fiche1-sous-titre-color: var(--gris-pale);
+  --fiche1-fond-bloc: var(--gris-pale);
+  --fiche1-liens-color: var(--rouge);
+  
+  --fiche2-titre-fond: var(--noir);
+  --fiche2-titre-color: var(--rouge);
+  --fiche2-titre-citation-color: var(--rouge);
+  --fiche2-sous-titre-fond: var(--rouge);
+  --fiche2-sous-titre-color: var(--gris-pale);
+  --fiche2-fond-bloc: var(--gris-fonce);
+  --fiche2-image-border: var(--rouge);
+  --fiche2-texte-color: var(--gris-pale);
+  --fiche2-fond-bloc-description: var(--gris-pale);
+  --fiche2-border-infos: var(--rouge);
+  --fiche2-infos-titres: var(--rouge);
+  --fiche2-scrollbar-fond: var(--gris-fonce);
+ --fiche2-scrollbar-color: var(--rouge);
+  --fiche2-descriptions-color: var(--gris-fonce);
 }
 
 /* ------------------------------------------- messages staff */
@@ -243,113 +268,117 @@
 
 /* ------------------------------------------------------------------------------- NOUVELLE FICHE */
 #PRbloc {
-  width: auto;
-  box-sizing: border-box;
-  background-image: none !important;
-  padding: 10px 0;
-  max-width: 1000px;
-  position: relative;
-  z-index: 1;
+    width: auto;
+    box-sizing: border-box;
+    background-image: none !important;
+    padding: 10px 0;
+    max-width: 1000px;
+    position: relative;
+    z-index: 1;
 }
+
 .PR {
-  margin: 50px;
-  position: relative;
-  z-index: 4;
-  color: #d9d4f6;
+    margin: 50px;
+    position: relative;
+    z-index: 4;
+    color: var(--fiche2-texte-color);
 }
+
 .PRtitre {
-  font: 45px "lequire";
-  text-align: center;
-  padding: 30px;
-  color: var(--orange-fiche);
-  background: var(--blue-fonce-fiche);
-  letter-spacing: 0.5px;
-  border-radius: 25px;
+    font: 45px "Bebas Neue";
+    text-align: center;
+    padding: 30px;
+    color: var(--fiche2-titre-color);
+    background: var(--fiche2-titre-fond);
+    letter-spacing: 0.5px;
 }
+
 .PRcit {
-  font: 17px "roboto";
-  text-shadow: none;
-  text-transform: lowercase;
-  font-style: italic;
-  width: auto;
-  margin: 15px 10px 0 10px;
-  margin-bottom: -25px;
-  box-sizing: border-box;
-  line-height: 20px;
-  color: var(--blue-pale-fi);
+    font: 17px "Bebas Neue";
+    text-shadow: none;
+    text-transform: lowercase;
+    font-style: italic;
+    width: auto;
+    margin: 15px 10px 0 10px;
+    margin-bottom: -25px;
+    box-sizing: border-box;
+    line-height: 20px;
+    color: var(--fiche2-titre-citation-color);
 }
-.PRinf,
-.PRdesc {
-  margin: 25px 0px;
-  background-color: #7b7dbd;
-  padding: 20px;
-  border-radius: 20px;
+
+.PRinf, .PRdesc {
+    margin: 25px 0px;
+    background-color: var(--fiche2-fond-bloc);
+    padding: 20px;
 }
+
 .PRtit {
-  text-align: center;
-  font: 20px "lequire";
-  line-height: 40px;
-  margin-bottom: 30px;
-  background: var(--blue-fonce-fiche);
-  color: var(--orange-fiche);
-  text-transform: uppercase;
-  border-radius: 10px;
+    text-align: center;
+    font: 20px "Bebas Neue";
+    line-height: 40px;
+    margin-bottom: 30px;
+    background: var(--fiche2-sous-titre-fond);
+    color: var(--fiche2-sous-titre-color);
 }
+
 .inf {
-  border-left: 5px solid var(--blue-fonce-fiche);
-  padding: 5px 10px;
-  height: 240px;
-  overflow: auto;
-  font-size: 14px;
-  box-sizing: border-box;
-  scrollbar-color: var(--blue-fonce-fiche) var(--blue-pale-fi);
-  scrollbar-width: thin;
+    border-left: 5px solid var(--fiche2-border-infos);
+    padding: 5px 10px;
+    height: 240px;
+    overflow: auto;
+    font-size: 14px;
+    box-sizing: border-box;
+    scrollbar-color: var(--fiche2-scrollbar-color) var(--fiche2-scrollbar-fond);
+    scrollbar-width: thin;
 }
+
 .inf span {
-  border-bottom: 2px solid var(--blue-fonce-fiche);
-  padding: 2px 0px;
-  margin-right: 5px;
-  font-family: "lequire";
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 1.5px;
-  color: #ffb28f;
+    padding: 2px 0px;
+    margin-right: 5px;
+    font-family: "lequire";
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: var(--fiche2-infos-titres);
 }
+
 .inf br {
   margin-top: 2px;
 }
+
 .infimg {
-  float: right;
-  overflow: hidden;
-  width: 240px;
-  height: 240px;
-  box-sizing: border-box;
-  border: 10px solid var(--blue-fonce-fiche);
-  border-radius: 20px;
+    float: right;
+    overflow: hidden;
+    width: 240px;
+    height: 240px;
+    box-sizing: border-box;
+    border: 10px solid var(--fiche2-image-border);
 }
+
 .infimg img {
   width: 220px;
 }
+
 .PRtith {
-  background-color: var(--blue-fonce-fiche);
-  color: var(--orange-fiche);
-  font: 20px "lequire";
-  text-transform: uppercase;
-  margin-bottom: 0;
-  padding: 10px 0;
-  border-radius: 20px 20px 0px 0px;
+    background-color: var(--fiche2-sous-titre-fond);
+    color: var(--fiche2-sous-titre-color);
+    font: 20px "Bebas Neue";
+    text-transform: uppercase;
+    margin-bottom: 0;
+    padding: 10px 0;
 }
 
 .hist {
-  background: #7b7dbd;
-  padding: 30px;
-  border-top: none;
-  font-size: 16.5px;
-  border-radius: 0px 0px 20px 20px;
+    background: var(--fiche2-fond-bloc);
+    padding: 30px;
+    border-top: none;
+    font-size: 16.5px;
 }
+
 .PRdesc {
   box-sizing: border-box;
 }
+
 .PRphy,
 .PRcar {
   display: flex;
@@ -359,31 +388,29 @@
   font-size: 15px;
 }
 .PRphyimg {
-  min-width: 170px;
-  height: 330px;
-  overflow: hidden;
-  border: 10px solid var(--blue-fonce-fiche);
-  margin-right: 10px;
-  box-sizing: border-box;
-  filter: grayscale(1);
+    min-width: 170px;
+    height: 330px;
+    overflow: hidden;
+    border: 10px solid var(--fiche2-image-border);
+    margin-right: 10px;
+    box-sizing: border-box;
 }
 .PRphyimg img {
   width: 160px;
   height: 320px;
 }
 
-.phy,
-.car {
-  background-color: var(--blue-pale-fi);
-  padding: 10px;
-  height: 325px;
-  box-sizing: border-box;
-  overflow: auto;
-  overflow-y: scroll;
-  scrollbar-color: var(--blue-fonce-fiche) var(--blue-pale-fi);
-  scrollbar-width: thin;
-  flex-grow: 2;
-  color: var(--blue-fonce-fiche);
+.phy, .car {
+    background-color: var(--fiche2-fond-bloc-description);
+    padding: 10px;
+    height: 325px;
+    box-sizing: border-box;
+    overflow: auto;
+    overflow-y: scroll;
+    scrollbar-color: var(--fiche2-scrollbar-color) var(--fiche2-scrollbar-fond);
+    scrollbar-width: thin;
+    flex-grow: 2;
+    color: var(--fiche2-descriptions-color);
 }
 
 .PRcar {
