@@ -13,32 +13,7 @@
   --staff-color-border: var(--rouge);
   --staff-color-border-sous-titre: var(--rouge);
   --staff-color-liens: var(--rouge);
-  --staff-color-sous-titre: var(--rouge);
-
-  --fiche1-titre-fond: var(--noir);
-  --fiche1-titre-color: var(--rouge);
-  --fiche1-titre-citation-color: var(--rouge);
-  --fiche1-border-bottom: var(--noir);
-  --fiche1-fond: var(--gris-fonce);
-  --fiche1-sous-titre-fond: var(--rouge);
-  --fiche1-sous-titre-color: var(--gris-pale);
-  --fiche1-fond-bloc: var(--gris-pale);
-  --fiche1-liens-color: var(--rouge);
-  
-  --fiche2-titre-fond: var(--noir);
-  --fiche2-titre-color: var(--rouge);
-  --fiche2-titre-citation-color: var(--rouge);
-  --fiche2-sous-titre-fond: var(--rouge);
-  --fiche2-sous-titre-color: var(--gris-pale);
-  --fiche2-fond-bloc: var(--gris-fonce);
-  --fiche2-image-border: var(--rouge);
-  --fiche2-texte-color: var(--gris-pale);
-  --fiche2-fond-bloc-description: var(--gris-pale);
-  --fiche2-border-infos: var(--rouge);
-  --fiche2-infos-titres: var(--rouge);
-  --fiche2-scrollbar-fond: var(--gris-fonce);
- --fiche2-scrollbar-color: var(--rouge);
-  --fiche2-descriptions-color: var(--gris-fonce);
+  --staff-color-sous-titre: var(--rouge);  
 }
 
 /* ------------------------------------------- messages staff */
@@ -113,11 +88,26 @@
 
 
 /* ------------------------------------------------------------------------------ OLD FICHES ET RS */
+:root {
+  --fiche1-texte-color: var(--gris-fonce);
+  --fiche1-titre-fond: var(--noir);
+  --fiche1-titre-color: var(--rouge);
+  --fiche1-titre-citation-color: var(--rouge);
+  --fiche1-border-bottom: var(--noir);
+  --fiche1-fond: var(--gris-fonce);
+  --fiche1-sous-titre-fond: var(--rouge);
+  --fiche1-sous-titre-color: var(--gris-pale);
+  --fiche1-fond-bloc: var(--gris-pale);
+  --fiche1-liens-color: var(--rouge);
+}
+
+
 #FCH2prez, .fondfiche {
     margin: auto;
     max-width: 600px;
     height: auto;
     box-sizing: border-box;
+  color: var(--fiche1-texte-color);
 }
 
 #FCH2prez a,
@@ -267,6 +257,23 @@
 }
 
 /* ------------------------------------------------------------------------------- NOUVELLE FICHE */
+:root {  
+  --fiche2-titre-fond: var(--noir);
+  --fiche2-titre-color: var(--rouge);
+  --fiche2-titre-citation-color: var(--rouge);
+  --fiche2-sous-titre-fond: var(--rouge);
+  --fiche2-sous-titre-color: var(--gris-pale);
+  --fiche2-fond-bloc: var(--gris-fonce);
+  --fiche2-image-border: var(--rouge);
+  --fiche2-texte-color: var(--gris-pale);
+  --fiche2-fond-bloc-description: var(--gris-pale);
+  --fiche2-border-infos: var(--rouge);
+  --fiche2-infos-titres: var(--rouge);
+  --fiche2-scrollbar-fond: var(--gris-fonce);
+ --fiche2-scrollbar-color: var(--rouge);
+  --fiche2-descriptions-color: var(--gris-fonce);
+}
+
 #PRbloc {
     width: auto;
     box-sizing: border-box;
