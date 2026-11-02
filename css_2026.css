@@ -569,6 +569,8 @@
   --notifi-border-read: var(--gris-pale);
   --mentiontag: var(--rouge);
   --mentiontag-hover: var(--gris-fonce);
+  --notifi-nbrnotifi-fond: var(--gris-pale);
+  --notifi-nbrnotifi-color: var(--noir);
 }
 
 .mentiontag {
@@ -623,7 +625,8 @@ div#notiffi_button.active {
 /* Conteneur du nombre de notification non lues REMPLI */
 .unread_count {
  position: absolute;
- background: var(--neutralDarker);
+ background: var(--notifi-nbrnotifi-fond);
+  color: var(--notifi-nbrnotifi-color);
  border-radius: 5px;
  width: 25px;
  display: grid;
@@ -634,8 +637,8 @@ div#notiffi_button.active {
  opacity: 1;
  aspect-ratio: 1;
  transition: scale ease-out .2s;
-  top: 28px;
-    left: 25px;
+      top: 25px;
+    right: -5px;
 }
 
 /* Conteneur du nombre de notification non lues VIDE */
